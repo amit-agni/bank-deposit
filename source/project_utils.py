@@ -140,17 +140,16 @@ def classificationMetrics(y_true,y_prob):
     print("Precision :",precision_score(y_true,y_prob))
     print("Recall :",recall_score(y_true,y_prob))
     print("F1 Score :",f1_score(y_true,y_prob))
-    print("******************************************")
+    print(".............................")
     print("y_true Counts :")
     print(countsAndProportions(y_true))
     print("pred Counts :")
     print(countsAndProportions(pd.Series(y_prob)))
 
 
-def modelTrainPredict(model,train_prep,train_set_Y,test_set_X,test_set_Y):
+def modelTrainPredict(model,train_prep,train_set_Y,test_prep,test_set_Y):
     model = model
-    model.fit(train_prep, train_set_Y)
-    test_prep = full_pipeline.transform(test_set_X)
+    model.fit(train_prep, train_set_Y)       
     pred = model.predict(test_prep)
     classificationMetrics(test_set_Y,pred)
     

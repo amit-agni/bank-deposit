@@ -1,8 +1,12 @@
-# Credit Card Fraud Detection
+# Bank Deposit Propensity Model
 
-Recognising fraudulent transactions is one of the most common application of Machine Learning. This project tries to solve the problem as an end-to-end machine learning project
+The tools that predict whether a customer will take a particular action based on certain stimuli are called Customer Propensity models.
 
-The dataset is provided by [Kaggle](https://www.kaggle.com/mlg-ulb/creditcardfraud). The dataset description is as follows :
->The datasets contains transactions made by credit cards in September 2013 by european cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172% of all transactions.
+This project uses a Portuguese bank's direct marketing campaigning data to predict whether a customer will apply for a Term deposit. The can be downloaded from [UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing)
 
->It contains only numerical input variables which are the result of a PCA transformation. Unfortunately, due to confidentiality issues, we cannot provide the original features and more background information about the data. Features V1, V2, … V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'. Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature 'Amount' is the transaction Amount, this feature can be used for example-dependant cost-senstive learning. Feature 'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.
+The dataset has 21 features broadly divided into the following categories
+1. Individual Customer details like age, education, marital status etc
+2. Details of the current Campaign like last contact week/month, total contacts made
+3. Previous campaign information
+4. Overall economic indicators
+5. Target feature indicating whether the customer subscribed a term deposit
